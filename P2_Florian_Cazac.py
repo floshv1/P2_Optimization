@@ -89,7 +89,7 @@ def simplex_method():
 
     # Input constraint matrix and bound vector
     os.system("cls")
-    print("\nConstraints section:")
+    print("Constraints section:")
     constraint = []
     bound = []
     for i in range(num_constraints):
@@ -158,5 +158,36 @@ def simplex_method():
     print("Optimal value:", tableau[-1, -1])
     return solution, tableau[-1, -1]
 
+
+def display_menu():
+    os.system("cls")
+    print("Choose the method you want to use:")
+    print("1. OR-Tools")
+    print("2. Simplex Method")
+    print("3. Exit")
+
+
+def menu():
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            os.system("cls")
+            solve_with_or_tools()
+            input("Press Enter to continue...")
+        elif choice == "2":
+            os.system("cls")
+            simplex_method()
+            input("Press Enter to continue...")
+        elif choice == "3":
+            break
+        else:
+            os.system("cls")
+            print("Invalid choice. Please enter 1, 2, or 3.")
+            input("Press Enter to continue...")
+    
+
+    
 if __name__ == "__main__":
-    simplex_method()
+    menu()
