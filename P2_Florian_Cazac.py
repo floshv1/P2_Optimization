@@ -72,6 +72,7 @@ def print_tableau(tableau, iteration):
     print(f"\nIteration {iteration}")
     print("Tableau:")
     print(tableau)
+    
 
 def simplex_method():
     
